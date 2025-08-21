@@ -110,7 +110,7 @@ class ProductUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         producto = self.get_object()
-        return self.request.user == producto.usuario
+        return self.request.user == producto.usuario or self.request.user.is_superuser
 
 
 class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -120,7 +120,8 @@ class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         producto = self.get_object()
-        return self.request.user == producto.usuario
+        return self.request.user == producto.usuario or self.request.user.is_superuser
+
 
 #----------------------------------------------------------------------------------------------
 
