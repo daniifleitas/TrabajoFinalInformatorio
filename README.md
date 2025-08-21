@@ -43,7 +43,7 @@ ProyectoFinalDjango/
 
 ## Instalación y configuración
 1. Clonar el repositorio:
-   git clone https://github.com/WilsonLombardo/ProyectoFinalDjango.git
+   git clone https://github.com/daniifleitas/TrabajoFinalInformatorio
 
 2. Crear y activar entorno virtual (recomendado):
    python -m venv venv
@@ -72,7 +72,7 @@ ProyectoFinalDjango/
 - Footer con redes sociales y créditos
 
 ## Autores
-Daniela Fleitas, Luciano Bottegoni, Marcelo Escalante y Wilson Lombardo
+Daniela Fleitas y Marcelo Escalante 
 
 ## Contribución
 Las contribuciones son bienvenidas. Por favor:
@@ -85,6 +85,4 @@ Las contribuciones son bienvenidas. Por favor:
 ## Licencia
 Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
 
-## Contacto
-Wilson Lombardo - [@tuusuario](https://github.com/WilsonLombardo)  
-Proyecto del Informatorio Chaco 2025 - [Sitio web](https://campus-informatorio.chaco.gob.ar)
+
