@@ -35,12 +35,25 @@ class ClientListView(ListView):
 ## VISTAS DE PRODUCTO
 # Vista de Clase que lista los productos
 class ProductListView(ListView):
-    def get(self,request,*args,**kwargs):
-        productos = Producto.objects.all()
+    def get(self, request, *args, **kwargs):
+        orden = request.GET.get("orden", "")
+        
+        if orden == "fecha_asc":
+            productos = Producto.objects.all().order_by("fecha_publicacion")
+        elif orden == "fecha_desc":
+            productos = Producto.objects.all().order_by("-fecha_publicacion")
+        elif orden == "alf_asc":
+            productos = Producto.objects.all().order_by("articulo")
+        elif orden == "alf_desc":
+            productos = Producto.objects.all().order_by("-articulo")
+        else:
+            productos = Producto.objects.all()
+
         context = {
-            'productos':productos
+            "productos": productos,
+            "orden_actual": orden  # para que el template sepa qué opción está seleccionada
         }
-        return render(request,'productos_list.html',context)
+        return render(request, "productos_list.html", context)
 
 
 # Vista para realizar búsqueda de productos (por articulo)
