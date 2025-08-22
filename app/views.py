@@ -148,9 +148,9 @@ class ContactCreateView(View):
                 #AGREGADO PARA ENVIO DE MAIL
                 asunto_mail_usuario = 'contacto - lambda3d'
                 mensaje_a_usuario = """
-                                    Gracias por contactarte con lambda-3D impresiones.
-                                    En breve nos comunicaremos para asesorarte en lo que necesites.
-                                    Saludos!
+                                    Gracias por contactarte con CineClub.
+                                    En breve nos comunicaremos para responder tu consulta.
+                                    Saludos
                                     """
                 contenido_mail_usuario = """
                                             <html>
@@ -175,10 +175,9 @@ class ContactCreateView(View):
                 # caso contrario, enviará el mensaje...
                 except:
                     msg_alerta = """
-                               Para que la página envíe mail al usuario, se debe configurar cuenta de mail HOST en 'settings.py'.
-                               Es decir, completar con datos de cuenta válida:\n
-                               'EMAIL_HOST_USER = cuenta de mail válida.'\n
-                               'EMAIL_HOST_PASSWORD = contraseña de la cuenta.'
+                               Gracias por contactarte con CineClub.
+                               En breve nos comunicaremos para responder tu consulta.
+                               Saludos'
                                """
 
                 c, created = Contacto.objects.get_or_create(nombre=nombre,email=email,telefono=telefono,asunto=asunto,mensaje=mensaje)
