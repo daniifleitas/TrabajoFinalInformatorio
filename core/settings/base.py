@@ -92,12 +92,12 @@ USE_TZ = True
 
 
 # --- Static & Media Files ---
-STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = "/static/"
+STATIC_ROOT = "../TrabajoFinalInformatorio/staticfiles"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_URL = "/media/"  # Changed from /images/ for convention
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = "../TrabajoFinalInformatorio/media"
 
 
 # --- Crispy Forms ---
